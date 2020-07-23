@@ -48,6 +48,7 @@ export class AuthController {
 
     @Get('logout')
     async logout() {
+        console.log("Logout got called");
         return "yo there"; // This needs to remove a session ID from a user's document.
     }
 

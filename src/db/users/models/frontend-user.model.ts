@@ -16,5 +16,4 @@ export interface FrontendUser {
     };
     readonly roles: string[];
     readonly createdAt: Date;
-    readonly token?: string;
 }

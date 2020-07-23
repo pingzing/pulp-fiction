@@ -87,8 +87,7 @@ export class UsersService {
                 watching: user.stats.watching,
             },
             roles: user.audit.roles,
-            createdAt: user.createdAt,
-            token: newToken,
+            createdAt: user.createdAt            
         };
         return frontendUser;
     }

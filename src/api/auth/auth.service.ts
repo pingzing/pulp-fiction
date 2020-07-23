@@ -61,7 +61,8 @@ export class AuthService {
      * 
      * @param user A user's JWT payload
      */
-    async refreshLogin(user: JwtPayload): Promise<FrontendUser> {
+    async refreshLogin(): Promise<FrontendUser> {
+        const user = 
         const validatedUser = await this.usersService.findOneById(user.sub);
         const newPayload: JwtPayload = {
             username: validatedUser.username,

@@ -10,6 +10,8 @@ export class AuthGuard implements CanActivate {
   async canActivate(context: ExecutionContext): Promise<boolean> {
     // Getting the request.
     const request = context.switchToHttp().getRequest();
+    const cookies = request.cookies;
+    console.log(cookies);
 
     // Getting the JSON Web Token from the authorization header.
     const jwtToken: string = request.headers['authorization'];
